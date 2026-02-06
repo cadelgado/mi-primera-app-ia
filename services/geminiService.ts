@@ -4,7 +4,7 @@ import { ProposalInput } from "../types";
 import { SYSTEM_INSTRUCTION } from "../constants";
 
 export const generateProposal = async (input: ProposalInput): Promise<string> => {
-  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.GEMINI_API_KEY});
   
   const attachmentParts = (input.attachments || []).map(att => ({
     inlineData: {
